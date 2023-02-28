@@ -4,15 +4,25 @@
 
 @font-face {
   font-family: Rubik;
-  src: url('./assets/fonts/Rubik/Rubik-VariableFont_wght.ttf') format("woff");
+  src: url("./assets/fonts/Rubik/Rubik-VariableFont_wght.ttf") format("woff");
 }
-
 
 * {
   color: white;
   font-family: Rubik, Arial, Helvetica, sans-serif;
 }
 
-section, header, footer {
+section,
+header,
+footer {
   overflow-x: hidden;
+}
+
+@layer components {
+  .container {
+  }
+
+  .menu-sticky {
+    @apply fixed top-0 w-full md:pb-8 pb-4 md:pt-8 transition z-[100];
+  }
 }
